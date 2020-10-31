@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "categories",
   "info": {
-    "name": "category"
+    "name": "category",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -10,14 +11,46 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "name": {
+    "picture": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "actors",
+        "athletes",
+        "comedias",
+        "gamers",
+        "models",
+        "more",
+        "musicians",
+        "reality"
+      ]
+    },
+    "title_en": {
       "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "title_zh": {
+      "type": "string",
+      "unique": true,
       "required": true
     },
-    "restaurants": {
-      "collection": "restaurant",
-      "via": "categories",
-      "dominant": true
+    "title_hk": {
+      "type": "string"
+    },
+    "subcategories": {
+      "via": "category",
+      "collection": "subcategory"
     }
   }
 }

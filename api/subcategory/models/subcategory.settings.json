@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "subcategories",
+  "info": {
+    "name": "subcategory"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title_en": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "title_zh": {
+      "type": "string"
+    },
+    "title_hk": {
+      "type": "string"
+    },
+    "category": {
+      "model": "category",
+      "via": "subcategories"
+    }
+  }
+}
