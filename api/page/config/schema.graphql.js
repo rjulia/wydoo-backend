@@ -2,7 +2,7 @@ const { sanitizeEntity } = require('strapi-utils');
 
 module.exports = {
   query: `
-    pageBySlug(id: ID slug: String): Page
+    pageBySlug(slug: String): Page
   `,
   resolver: {
     Query: {
