@@ -20,10 +20,6 @@
     },
     "title_hk": {
       "type": "string"
-    },
-    "category": {
-      "model": "category",
-      "via": "subcategories"
     }
   }
 }

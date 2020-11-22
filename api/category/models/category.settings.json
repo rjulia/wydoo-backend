@@ -49,7 +49,6 @@
       "type": "string"
     },
     "subcategories": {
-      "via": "category",
       "collection": "subcategory"
     }
   }
